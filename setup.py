@@ -14,7 +14,7 @@
 
 """Setup file for lottery ticket hypothesis."""
 
-from setuptools import setup
+from setuptools import setup,find_namespace_packages
 
 SHORT_DESCRIPTION = """
 An implementation of the lottery ticket hypothesis experiment.""".strip()
@@ -22,7 +22,7 @@ An implementation of the lottery ticket hypothesis experiment.""".strip()
 DEPENDENCIES = [
     'six',
     'fire',
-    'tensorflow',
+    'tensorflow-gpu',
     'keras',
     'numpy',
     'absl-py',
@@ -65,7 +65,7 @@ setup(
 
     keywords='lottery ticket hypothesis',
 
-    packages=['lottery-ticket'],
+    packages=find_namespace_packages(),
 
     install_requires=DEPENDENCIES,
 )
